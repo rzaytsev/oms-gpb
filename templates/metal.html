@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ОМС Газпромбанк</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="static/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="static/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="static/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">Котировки ОМС</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="{% if active_menu == 2 %}active{%endif%}"><a href="/gold">Золото</a></li>
+              <li class="{% if active_menu == 3 %}active{%endif%}"><a href="/silver">Серебро</a></li>
+              <li class="{% if active_menu == 4 %}active{%endif%}"><a href="/login">Вход</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<script>
+$(function () {
+    $.getJSON('/read-data/{{ data_id }}', function(data1) {
+        $.getJSON('/read-data/{{ data_id1 }}', function(data2) {
+        // Create the chart
+            $('#container1').highcharts('StockChart', {
+                rangeSelector : { selected : 1  },
+                title : {  text : '{{metal_name}}'    },
+                yAxis : {  title : {  text : 'Цена, руб.'  }, },
+                series : [{
+                    name : 'Покупка ',
+                    data : data1,
+                    color : 'red',
+                    tooltip: { valueDecimals: 2 },
+                    },
+                    {
+                    name : 'Продажа',
+                    color : 'green',
+                    data : data2,
+                    tooltip: { valueDecimals: 2},
+                    },]
+            });
+        });
+
+    });
+});
+
+</script>
+
+
+    <p>{{metal_name}}<br> {{ today }} <br> Покупка: {{ buy_price }} <br> Продажа: {{ sell_price }}</p>
+        <div id="container1" style="height: 500px; min-width: 400px"></div>
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
