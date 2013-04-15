@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+
 from urllib2 import Request, urlopen
 import re
 from pyPdf import PdfFileReader
@@ -13,7 +17,7 @@ def wget(url):
     return text
 
 def get_current_links():
-    lines = wget("http://www.gazprombank.ru/personal/tariffs/index.php?year=2012&s_code=382")
+    lines = wget("http://www.gazprombank.ru/personal/tariffs/?s_code=382#d_382")
     data = []
     for line in lines:
         item = []
