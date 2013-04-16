@@ -2,6 +2,7 @@
 # coding: utf-8
 
 from flask import Flask, redirect, render_template
+from werkzeug.contrib.fixers import  ProxyFix
 import redis
 import json
 import datetime
@@ -58,6 +59,7 @@ def read_prices_db(i):
         res.append([int(day)*1000,float(prices_list[i].replace(' ', '').replace(',', '.'))])
     return res
 
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
