@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
+import sys
 from urllib2 import Request, urlopen
 import re
 from pyPdf import PdfFileReader
@@ -16,8 +16,8 @@ def wget(url):
         text = ufile.readlines()  ## read all its text
     return text
 
-def get_current_links():
-    lines = wget("http://www.gazprombank.ru/personal/tariffs/?s_code=382#d_382")
+def get_current_links(url):
+    lines = wget(url)
     data = []
     for line in lines:
         item = []
@@ -55,36 +55,52 @@ def read_pdf(url):
     return r
 
 def main():
-    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    args = sys.argv[1:]
+    if not args:
+        url = "http://www.gazprombank.ru/personal/tariffs/?s_code=382#d_382"
+    elif args[0] == "2012":
+        url = "http://www.gazprombank.ru/personal/tariffs/index.php?year=2012&s_code=382"
+    elif args[0] == "2013":
+        url = "http://www.gazprombank.ru/personal/tariffs/index.php?year=2013&s_code=382"
+    elif args[0] == "debug":
+        url = "http://www.gazprombank.ru/personal/tariffs/index.php?month=09&year=2012&s_code=382"
 
-    links = get_current_links()
+
+    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    links = get_current_links(url)
+
+    print "get data from: " + url
+    print'--------------------------------------------------------'
 
     for link in links:
-        print link[1] + ' ' + link[2]
+        print link
         date1 = datetime.datetime.strptime(link[1] + ' ' + link[2],'%d.%m.%Y %H:%M')
         ts1 =date1.strftime('%s')
-        print 'timestamp:' + ts1
-        print 'date+time from timestamp: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
-        prices =  read_pdf(link[0])
-        if (not prices == [['']]):
-            print prices
+        try:
+            prices =  read_pdf(link[0])
+            if (not prices == [['']]):
+                s =''
+                for metal in prices:
+                    s += metal[0].strip() + ' - ' +  metal[1].strip()
+                    s += ' - '
+                s = s[0:len(s)-2]
 
-            s =''
-            for metal in prices:
-                s += metal[0].strip() + ' - ' +  metal[1].strip()
-                s += ' - '
-            s = s[0:len(s)-2]
+                if r.sadd('days', ts1):
+                    print "add new day"
+                    print 'add: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
+                    print 'prices:' + ts1 + " | " +s
+                    r.set('prices:'+ts1, s)
+                else:
+                    print "alredy exists: " + str(datetime.datetime.fromtimestamp(float(ts1)))
 
-
-            print'\n\n'
-            if r.sadd('days', ts1):
-                print "add new day"
-                r.set('prices:'+ts1, s)
+                r.setnx('day:'+ts1, s)
+                print'--------------------------------------------------------'
             else:
-                print "day alredy exists"
-            r.setnx('day:'+ts1, s)
-        else:
-            print "\n\n !!! cannot read pdf file !!! \n\n"
+                print "\n\n !!! cannot read pdf file !!! \n\n"
+
+        except Exception, e:
+            raise e
+
 
 
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#
+#
+#
 from flask import Flask, redirect, render_template
 from werkzeug.contrib.fixers import  ProxyFix
 import redis
@@ -22,6 +24,10 @@ def hello():
 @app.route("/")
 def start():
     return render_template('page2.html',active_menu=1)
+
+@app.route("/test")
+def test():
+    return "Hello world!"
 
 @app.route("/login")
 def login():
