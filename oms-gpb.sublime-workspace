@@ -1,0 +1,646 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"tr",
+				"try	Try/Except"
+			],
+			[
+				"data",
+				"data_id"
+			],
+			[
+				"sil",
+				"silver_buy	Default"
+			],
+			[
+				"gold",
+				"gold_sell	Default"
+			],
+			[
+				"range",
+				"xrange()	xrange fn"
+			],
+			[
+				"pr",
+				"prices	Default"
+			],
+			[
+				"url",
+				"urlopen	Default"
+			],
+			[
+				"to",
+				"tozip	Default"
+			],
+			[
+				"comm",
+				"commands	Default"
+			],
+			[
+				"fiel",
+				"filename	Default"
+			],
+			[
+				"file",
+				"filename	Default"
+			],
+			[
+				"wre",
+				"write	Default"
+			],
+			[
+				"fil",
+				"file_list	Default"
+			],
+			[
+				"app",
+				"append()	Mutable"
+			],
+			[
+				"string",
+				"strings_list	Default"
+			],
+			[
+				"stri",
+				"strings_list	Default"
+			],
+			[
+				"rea",
+				"readlines()	file"
+			],
+			[
+				"sorted",
+				"sorted_words	Default"
+			],
+			[
+				"lo",
+				"lower()	string"
+			],
+			[
+				"wo",
+				"word_count	Default"
+			],
+			[
+				"get",
+				"get_dict_from_file	Default"
+			],
+			[
+				"cou",
+				"count()	string"
+			],
+			[
+				"g",
+				"get_dict_from_file"
+			],
+			[
+				"do",
+				"donuts"
+			],
+			[
+				"pa",
+				"pattern"
+			],
+			[
+				"ma",
+				"mathc_default"
+			],
+			[
+				"match",
+				"match_h"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"bir",
+				"birthday"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"sel",
+				"shell"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "todo.taskpaper",
+			"settings":
+			{
+				"buffer_size": 182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "get-data.py",
+			"settings":
+			{
+				"buffer_size": 3400,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE7\" />\n<link href=\"http://www.gazprombank.ru/media/ico/favicon.ico\" rel=\"shortcut icon\" />\n<title>Газпромбанк - Тарифы/Котировки</title>\n<link href=\"/bitrix/components/lenvendo/currency.course/templates/.default/style.css?1256107623\" type=\"text/css\" rel=\"stylesheet\" />\n<link href=\"/bitrix/templates/.default/components/lenvendo/news.calendar/template3/style.css?1271163176\" type=\"text/css\" rel=\"stylesheet\" />\n<link href=\"/bitrix/templates/.default/ajax/ajax.css\" type=\"text/css\" rel=\"stylesheet\" />\n<link href=\"/bitrix/templates/main_page/styles.css\" type=\"text/css\" rel=\"stylesheet\" />\n\n<script type=\"text/javascript\" src=\"/bitrix/js/main/ajax.js\"></script>\n<script src=\"/bitrix/templates/main_page/js/fixpng.js\" type=\"text/javascript\"></script>\n\n<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"/bitrix/templates/main_page/js/jScrollPane.css\" />\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/jquery-1.2.3.pack.js\"></script>\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/jquery.cookie.js\"></script>\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/jquery.dimensions.min.js\"></script>\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/jquery.mousewheel.min.js\"></script>\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/jScrollPane.js\"></script>\n<script type=\"text/javascript\" src=\"/bitrix/templates/main_page/js/bg-overlayer.js\"></script>\n<script type=\"text/javascript\">\n    $(document).ready(function () {\n        ResizeWindow();\n    });\n        function addHandler(obj, event, action) {\n          if(document.addEventListener) {\n           obj.addEventListener(event, action, false);\n          } else if(document.attachEvent) {\n           obj.attachEvent('on' + event, action);\n          } else {\n           obj['on' + event] = action;\n          }\n          obj['has' + event] = true;\n         }\n         addHandler(window, \"resize\", ResizeWindow);\n    function resize(obj){\n        if(obj.id == 'ts_s'){\n            $('.border > .text').removeClass('text-size-17');\n            $('.border > .text').removeClass('text-size-15');\n        }\n        if(obj.id == 'ts_m'){\n            $('.border > .text').removeClass('text-size-17');\n            $('.border > .text').addClass('text-size-15');\n        }\n        if(obj.id == 'ts_b'){\n            $('.border > .text').addClass('text-size-17');\n            $('.border > .text').removeClass('text-size-15');\n        }\n        $.each($('.font-size-link').children(), function(){\n            $(this).removeClass('act');\n         });\n        $(obj).addClass('act');\n    }\n</script>\n<script type=\"text/javascript\"> \n\n  var _gaq = _gaq || []; \n  _gaq.push(['_setAccount', 'UA-31919883-1']); \n  _gaq.push(['_setDomainName', 'gazprombank.ru']); \n  _gaq.push(['_setAllowLinker', true]); \n  _gaq.push(['_trackPageview']); \n\n  (function() { \n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; \n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; \n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); \n  })(); \n\n</script>\n</head>\n<body>\n<script language=\"JavaScript\" type=\"text/javascript\">\n    function toogle_auth(){\n        if($('#auth').css('display') == 'none'){\n            $('#auth').css('display','block');\n            $('#pop_ov').css('display','block');\n            $('#auth_img').attr('src','/images/my_bank_open.gif');\n            $('#auth_t_l').addClass('tab-l');\n            $('#auth_t_c').addClass('tab-c');\n            $('#auth_t_r').addClass('tab-r');\n                        $('#my_b').addClass('myBankOpen');\n        }else{\n            $('#auth').css('display','none');\n            $('#pop_ov').css('display','none');\n            $('#auth_img').attr('src','/images/my_bank.gif');\n            $('#auth_t_l').removeClass('tab-l');\n            $('#auth_t_c').removeClass('tab-c');\n            $('#auth_t_r').removeClass('tab-r');\n                        $('#my_b').removeClass('myBankOpen');\n        }\n    }\n</script>\n<div class=\"overlayer\" id=\"pop_ov\" style=\"display: none;\"><!--[if lte IE 6.5]><iframe></iframe><![endif]--></div>\n<div class=\"min-max-h\">\n    <div class=\"mainRight\">\n        <div class=\"myBank\" id=\"my_b\">\n            <table>\n                <tr>\n                    <td width=\"18\" ><div id=\"auth_t_l\"></div></td><!-- tab-l -->\n                    <td class=\"tab\"><div id=\"auth_t_c\"><img src=\"/images/my_bank.gif\" alt=\"\" id=\"auth_img\" />\n                        <a href=\"#\" onclick=\"toogle_auth();return false;\">Войти</a></div>\n                    </td><!-- tab-c -->\n                    <td width=\"15\"><div id=\"auth_t_r\"></div></td><!-- tab-r -->\n                </tr>\n                <tr>\n                    <td colspan=\"3\" class=\"bankFormBg\" style=\"display:none;\" id=\"auth\">\n                            \n<div class=\"bankForm\">\n<form method=\"post\" target=\"_top\" action=\"/personal/tariffs/index.php?login=yes&amp;month=09&amp;year=2012&amp;s_code=382\">\n            <input type=\"hidden\" name=\"backurl\" value=\"/personal/tariffs/index.php?month=09&amp;year=2012&amp;s_code=382\" />\n            <input type=\"hidden\" name=\"AUTH_FORM\" value=\"Y\" />\n    <input type=\"hidden\" name=\"TYPE\" value=\"AUTH\" />\n\n    <div class=\"field\">\n        <div class=\"fieldName\">Логин</div>\n        <input type=\"text\" name=\"USER_LOGIN\" maxlength=\"50\" value=\"\" size=\"17\" />\n    </div>\n    <div class=\"field\">\n        <div class=\"fieldName\">Пароль</div>\n        <input type=\"password\" name=\"USER_PASSWORD\" maxlength=\"50\" size=\"17\" />\n    </div>\n    <div class=\"field\">\n        <div class=\"fieldName\">&nbsp;</div>\n        <input type=\"checkbox\" id=\"USER_REMEMBER\" class=\"checkbox\" name=\"USER_REMEMBER\" value=\"Y\" />\n        <label>Запомнить меня</label>\n    </div>\n\n    <div class=\"field\">\n        <div class=\"fieldName\">&nbsp;</div>\n        <input type=\"submit\" name=\"Login\" value=\"Войти\" class=\"but\" />\n    </div>\n    <!--<p><a href=\"/personal/tariffs/index.php?month=09&amp;year=2012&amp;s_code=382&amp;forgot_password=yes&amp;backurl=%2Fpersonal%2Ftariffs%2Findex.php%3Fmonth%3D09%26year%3D2012%26s_code%3D382\">Восстановить пароль</a></p>-->\n</form>\n\n</div>\n                    </td>\n\n                </tr>\n            </table>\n        </div>\n         <table class=\"lang\">\n   <tr>\n    <td><div class=\"act\"><a href=\"/\">РУ</a></div></td>\n    <td><div class=\"\"><a href=\"/eng/personal/tariffs/\">EN</a></div></td>\n   </tr>\n</table>        <div class=\"clear-r\"></div>\n                <div class=\"myCity\">\n            <p class=\"city\">Выбор города</p>\n            <a href=\"#\" onclick=\"$('#r_popup').show();$('#pop_ov').show();return false\" class=\"linkCity\"><span>Москва</span>            <img src=\"/images/arrow_1.gif\" alt=\"\" /></a>\n            <div class=\"mT\">\n                <p><a href=\"/additional_office/\">Офисы обслуживания</a></p>\n                <p><a href=\"/atm/\">Банкоматы</a></p>\n            </div>\n        </div>\n                <div class=\"popup\" style=\"margin: -40px 0 0 -300px;display:none;\" id=\"r_popup\">\n<table class=\"no-transparency\">\n    <tr>\n        <td class=\"p-t-l\"></td>\n        <td class=\"p-t\"></td>\n        <td class=\"p-t-r\"></td>\n    </tr>\n\n    <tr>\n        <td class=\"p-l\"><div class=\"d-p-l\" style=\"height: 500px;\"></div></td>\n        <td class=\"p-bg\">\n            <a href=\"#\"><img src=\"/images/popup_close.gif\" onclick=\"$('#r_popup').hide();$('#pop_ov').hide();return false\" alt=\"Закрыть\" class=\"close\" /></a>\n            <h5>Города расположения филиалов</h5>\n            <div class=\"clear\"></div>\n            <div class=\"popupCity\">\n                                <div class=\"\">\n                                        <p>\n                                                <a href=\"?set_region=3\">\n                                                Астрахань                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=4\">\n                                                Барнаул                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=7165\">\n                                                Белгород                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=6\">\n                                                Брянск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=9353\">\n                                                Владивосток                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=7\">\n                                                Волгоград                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=8\">\n                                                Екатеринбург                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=9\">\n                                                Ижевск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=10\">\n                                                Иркутск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=13621\">\n                                                Йошкар-Ола                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=11\">\n                                                Казань                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=12\">\n                                                Калининград                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=13\">\n                                                Кемерово                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=14\">\n                                                Кострома                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=15\">\n                                                Краснодар                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=16\">\n                                                Красноярск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=17\">\n                                                Липецк                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=18\">\n                                                Махачкала                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=19\">\n                                                Москва                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=9415\">\n                                                Мурманск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=21\">\n                                                Нижний Новгород                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=22\">\n                                                Новосибирск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=23\">\n                                                Новый Уренгой                                            </a></p>\n                                            </div><div>\n                                        <p>\n                                                <a href=\"?set_region=24\">\n                                                Омск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=25\">\n                                                Оренбург                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=26\">\n                                                Пермь                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=27\">\n                                                Ростов-на-Дону                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=29\">\n                                                Самара                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=28\">\n                                                Санкт-Петербург                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=30\">\n                                                Саратов                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=31\">\n                                                Ставрополь                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=67961\">\n                                                Сургут                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=32\">\n                                                Томск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=33\">\n                                                Тула                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=34\">\n                                                Тюмень                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=35\">\n                                                Уфа                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=36\">\n                                                Ухта                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=52\">\n                                                Хабаровск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=9355\">\n                                                Чебоксары                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=38\">\n                                                Челябинск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=39\">\n                                                Щелково (Моск.обл.)                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=40\">\n                                                Югорск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=7167\">\n                                                Южно-Сахалинск                                            </a></p>\n                                        <p>\n                                                <a href=\"?set_region=51\">\n                                                Якутск                                            </a></p>\n                                    </div>\n            </div>\n        </td>\n\n        <td class=\"p-r\"><div class=\"d-p-r\" style=\"height: 500px;\"></div></td>\n    </tr>\n    <tr>\n        <td class=\"p-b-l\"></td>\n        <td class=\"p-b\"></td>\n        <td class=\"p-b-r\"></td>\n    </tr>\n</table>\n</div>      <div class=\"fon\">\n                                                                        +7 (495) 913-74-74                                                             </div>\n                                <div class=\"fonOther\" style=\"margin-bottom: 15px;\"><a onclick=\"$('#additiona_phones').show();$('#pop_ov').show();return false;\" href=\"javascript(0);\" class=\"otherPhone\">Дополнительные телефоны</a></div>\n                    <div id=\"additiona_phones\" class=\"popup fonOther\" style=\"margin: 0 0 0 -300px; display: none;\">\n                <table class=\"no-transparency\">\n                    <tr>\n                        <td class=\"p-t-l\"></td>\n                        <td class=\"p-t\"></td>\n                        <td class=\"p-t-r\"></td>\n                    </tr>\n                    <tr>\n                        <td class=\"p-l\"><div class=\"d-p-l\">&nbsp;</div></td>\n                        <td class=\"p-bg\">\n                            <a onclick=\"$('#additiona_phones').hide();$('#pop_ov').hide();return false;\" href=\"javascript:void(0);\"><img src=\"/images/popup_close.gif\" alt=\"Закрыть\" class=\"close\" /><br /></a>\n                            <div class=\"clear\"></div>\n                            <div class=\"popupOtherPhone\">\n                                \n<p><strong>Автоинформатор по курсам акций ОАО &quot;Газпром&quot;: \n    <br />\n  </strong>8 (800) 100-07-05 \n  <br />\n<strong>Круглосуточная Служба поддержки держателей банковских карт: \n    <br />\n  </strong>+7 (495) 913-79-99; +7 (495) 980-41-41; 8(800)100-00-89 (бесплатно для звонков из РФ) \n  <br />\n<strong>Единая справочная служба:</strong>  \n  <br />\n8 (800) 100-07-01</p>\n                            </div>\n                        </td>\n                        <td class=\"p-r\"><div class=\"d-p-r\">&nbsp;</div></td>\n                    </tr>\n                    <tr>\n                        <td class=\"p-b-l\"></td>\n                        <td class=\"p-b\"></td>\n                        <td class=\"p-b-r\"></td>\n                    </tr>\n                </table>\n            </div>\n                        <div class=\"menuRight\">\n            <div class=\"bl-t\"><img src=\"/images/block_r_t.gif\" alt=\"\" class=\"bl-t\" /></div>\n            <div class=\"\">\n                <ul>\n            <li><a href=\"/about/\" class=\"\">О Газпромбанке</a></li>\n            <li><a href=\"/ir/ratings/\" class=\"\">Акционерам и инвесторам</a></li>\n            <li><a href=\"/info/\" class=\"\">Раскрытие информации</a></li>\n            <li><a href=\"/research/\" class=\"\">Аналитика</a></li>\n            <li><a href=\"/tenders/\" class=\"\">Тендеры</a></li>\n            <li><a href=\"/contacts/\" class=\"\">Контактная информация</a></li>\n            <li><a href=\"/vacancy/\" class=\"\">Вакансии</a></li>\n            <li><a href=\"/feedback/\" class=\"\">Обратная связь</a></li>\n</ul>           </div>\n            <div class=\"bl-b\"><img src=\"/images/block_r_b.gif\" alt=\"\" class=\"bl-b\" /></div>\n        </div>\n        <div class=\"findRight\">\n            <script src=\"/bitrix/templates/.default/components/bitrix/search.form/form/script.js?1345010290\" type=\"text/javascript\"></script><form action=\"/search/index.php\">\n<div class=\"input_txt\">\n    <div class=\"box\"><input name=\"q\" type=\"text\" style=\"width: 172px;\" value=\"\"></div>\n    <div class=\"rbox\"></div>\n</div>\n<br clear=\"all\" />\n\n<div class=\"cleared\">\n    <div style=\"z-index: 15;\" class=\"grey_rounded2 field_new source_select_block\">\n        <input class=\"pick_source\" id=\"pick_source\" style=\"padding: 0; margin: 4px 0 0 5px; width: 75px; cursor: pointer; background-color: white; height: 15px;\" type=\"text\" value=\"Везде\" readonly=\"readonly\" />\n        <input type=\"hidden\" value=\"\" name=\"m_where[]\" id=\"m_where\" />\n        <a href=\"#\" class=\"fll\"><img class=\"pick_source\" src=\"/images/select_down.gif\" style=\"display: block;\" /></a>\n        <div class=\"gr_lt\"></div>\n        <div class=\"gr_rt\"></div>\n        <div class=\"gr_lb\"></div>\n        <div class=\"gr_rb\"></div>\n        <div style=\"display: none;\" class=\"dd_source_select dd_time_select cleared\">\n            <ul class=\"source_select\">\n                <li><div style=\"cursor: pointer;\" class=\"\">Везде</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_group\">Группа Газпромбанка</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_corporate\">Корпоративным клиентам</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_personal\">Частным клиентам</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_private_banking\">Private Banking</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_invest\">Инвестиционный банк</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_fin_org\">Финансовым организациям </div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_about\">О Газпромбанке</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_participant_investor\">Акционерам и инвесторам</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_info\">Раскрытие информации</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_analysis\">Аналитика</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_tenders\">Тендеры</div></li>\n                <li><div style=\"cursor: pointer;\" class=\"iblock_vacansy\">Вакансии</div></li>\n            </ul>\n        </div>\n</div>\n\n<div class=\"input_txt\">\n    <div class=\"box\"><input type=\"submit\" name=\"s\" value=\"Найти\" class=\"but\" /></div>\n    <div class=\"rbox\"></div>\n</div>\n<input type=\"hidden\" name=\"where_t\" id=\"where_form\" value=\"s\">\n</div><div class=\"clear\"></div>\n</form>     </div>\n        <div class=\"menuRightOrange\">\n            \n                <div class=\"bl-t\"><img class=\"bl-t\" alt=\"\" src=\"/images/block_r_t_orange.gif\"/></div>\n<div class=\"\">\n<ul>\n            <li><a href=\"/personal/documents/\">Документы и бланки</a></li>\n        \n            <li >\n            <a href=\"/personal/tariffs/\" class=\"act\">Тарифы/Котировки</a>\n        </li>\n        \n</ul>\n</div>\n<div class=\"bl-b\"><img class=\"bl-b\" alt=\"\" src=\"/images/block_r_b_orange.gif\"/></div>\n            \n        </div>\n                   \n            <script src=\"/bitrix/components/lenvendo/tizers.list/templates/.default/script.js?1255328889\" type=\"text/javascript\"></script>        <div class=\"blockImgRight\">\n        <a href=\"/private_banking/\"><img src=\"/upload/f4e/private banking.jpg\" alt=\"\" /></a>\n        <a href=\"/private_banking/\" class=\"link\"> </a>\n    </div>\n                <div class=\"blockImgRight\">\n        <a href=\"/personal/hb/\"><img src=\"/upload/507/dombank1.jpg\" alt=\"\" /></a>\n        <a href=\"/personal/hb/\" class=\"link\"></a>\n    </div>\n            <div class=\"blockImgRight\">\n        <a href=\"/personal/tc/\"><img src=\"/upload/01b/telekard.jpg\" alt=\"\" /></a>\n        <a href=\"/personal/tc/\" class=\"link\">  </a>\n    </div>\n        <div class=\"blockImgRight\">\n        <div class=\"popup\" style=\"margin: -200px 0 0 -300px;display:none;\" id=\"calc\">\n        <table class=\"\">\n                <tr>\n                        <td class=\"p-t-l\"></td>\n\n                        <td class=\"p-t\"></td>\n                        <td class=\"p-t-r\"></td>\n                </tr>\n                <tr>\n                        <td class=\"p-l\"><div class=\"d-p-l\" style=\"height: 265px;\"></div></td>\n                        <td class=\"p-bg\">\n                                <a href=\"#\" onclick=\"toogle_calc();return false;\"><img src=\"/images/popup_close.gif\" alt=\"Закрыть\" class=\"close\" /></a>\n                                <h5>Калькуляторы</h5>\n\n                                <div class=\"clear\"></div>\n                                <div class=\"popupCalculator\">\n                                        <div class=\"\">\n                                                <img src=\"/images/img_8.gif\" alt=\"\" class=\"mT\" /><p><a href=\"/calcs/ipo/\">Ипотечный калькулятор</a></p>\n                                        </div>\n                                        <div class=\"\">\n                                                <img src=\"/images/img_9.gif\" alt=\"\" class=\"mT-ie\" /><p><a href=\"/calcs/autocredit/\">Калькулятор автокредитования</a></p>\n                                        </div>\n\n                                        <div class=\"\">\n                                                <img src=\"/images/t_icon.gif\" alt=\"\" /><p><a href=\"/calcs/deposits/\">Калькуляторы вкладов</a></p>\n                                        </div>\n                                        <div class=\"\">\n                                                <img src=\"/images/img_11.gif\" alt=\"\" /><p><a href=\"/calcs/ofbu/index.php\">Калькулятор ОФБУ</a></p>\n                                        </div>\n                                </div>\n                        </td>\n\n                        <td class=\"p-r\"><div class=\"d-p-r\" style=\"height: 265px;\"></div></td>\n                </tr>\n                <tr>\n                        <td class=\"p-b-l\"></td>\n                        <td class=\"p-b\"></td>\n                        <td class=\"p-b-r\"></td>\n                </tr>\n        </table>\n</div>\n\n        <a href=\"/calcs/\" onclick=\"toogle_calc();return false;\"><img src=\"/upload/a95/calculator1.jpg\" alt=\"\" /></a>\n        <a href=\"/calcs/\" onclick=\"toogle_calc();return false;\" class=\"link\">   </a>\n    </div>\n        <div class=\"blockImgRight\">\n        <a href=\"/personal/advertisement/\"><img src=\"/upload/924/announce1.jpg\" alt=\"\" /></a>\n        <a href=\"/personal/advertisement/\" class=\"link\">     </a>\n    </div>\n                </div>\n    \n    <div class=\"mainLeft\">\n        <div class=\"header\">\n            <div class=\"b-r-Gr\">\n                <img src=\"/images/main_gr_r.gif\" alt=\"\" class=\"img-gr-r\" />\n            </div>\n            <div class=\"b-Gr\">\n                <div class=\"mT-4\">\n\n                    <div class=\"mRBlue\">\n                        <div class=\"b-Bl\">\n                                                        <img src=\"/upload/a49/a496690437c3760f650d395eae5d5104.jpg\" alt=\"\" class=\"main-img\" />\n                            <div class=\"logo\">\n                                <a href=\"/\" style=\"cursor:pointer;\" title=\"На главную\">\n                                <div class=\"logoImg\" style=\"background: url(/images/logo.png) no-repeat left top;\">&nbsp;</div>\n                                </a>\n                                <p>В масштабах страны, в интересах каждого</p>\n                            </div>\n                      </div>\n\n                    </div>\n                </div>\n            </div>\n            <div class=\"pageMenuBg\">\n                                                    </div><!-- Перенесено из <div class=\"mainMenu\"> на внутренних страницах -->\n        </div>\n\n        <!-- Главное меню -->\n        <div class=\"mainMenu\">\n            <script src=\"/bitrix/templates/inner_page_green/components/bitrix/menu/main/script.js?1256202954\" type=\"text/javascript\"></script><table class=\"mT orange\">\n    <tr>\n        <td class=\"\" width=\"15%\"><!-- act -->\n            <div class=\"marker\">\n                <a href=\"/group/\">\n                    Группа<br/>Газпромбанка             </a>\n            </div>\n        </td>\n        <td class=\"\" width=\"23%\"><!-- act -->\n            <div class=\"divider\"></div>\n            <div class=\"marker\">\n                <a href=\"/corporate/\">\n                    Корпоративным<br />клиентам             </a>\n            </div>\n        </td>\n        <td class=\"act\" width=\"15%\">\n            <div class=\"divider\"></div><div class=\"marker\">\n                <a href=\"/personal/\">\n                    Частным<br />клиентам               </a>\n            </div>\n        </td>\n        <td class=\"\" width=\"23%\">\n            <div class=\"divider\"></div><div class=\"marker\">\n                <a href=\"/invest_bank/\">    \n                    Инвестиционный<br />банк                </a>\n            </div>\n        </td>\n        <td class=\"\" width=\"19%\">\n            <div class=\"divider\"></div><div class=\"marker\">\n                <a href=\"/finance/\">\n                    Финансовым<br />организациям                </a>\n            </div>\n        </td>\n    </tr>\n</table>        </div>\n        <!-- Главное меню закончилось -->\n\n        <div class=\"mainContent\">\n                        <div class=\"lineNav\"><a href=\"/\" title=\"Главная\">Главная</a> / <a href=\"/personal/\" title=\"Частным клиентам\">Частным клиентам</a> / Тарифы </div>           \n            <div class=\"pageLeft\" >\n                <div class=\"menuLeft\">\n                    <div class=\"bl-t\"><img src=\"/images/menu_l_t.gif\" alt=\"\" class=\"bl-t\" /></div>\n\n                    <div class=\"text orange\">\n                        <script src=\"/bitrix/templates/inner_page_green/components/bitrix/menu/left_menu_js/script.js?1256202954\" type=\"text/javascript\"></script><ul>\n        <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_0\" onclick=\"toggleAMenu('0');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_0\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/credits/\">Кредиты</a></div>\n    </li>\n                    <ul id=\"ul_m_0\" class=\"no-act \" >\n                        <li><a href=\"/personal/credits/148/\" class=\"\">ИПОТЕЧНЫЕ КРЕДИТЫ</a></li>\n                        <li><a href=\"/personal/credits/150564/\" class=\"\">Экспресс-анкета (ипотека)</a></li>\n                        <li><a href=\"/personal/credits/197688/\" class=\"\">Заявление-анкета (ипотека)</a></li>\n                        <li><a href=\"/personal/credits/349/\" class=\"\">Аккредитованные строительные объекты</a></li>\n                        <li><a href=\"/personal/credits/149/\" class=\"\">КРЕДИТЫ НА ПОКУПКУ АВТОМОБИЛЯ</a></li>\n                        <li><a href=\"/personal/credits/154962/\" class=\"\">Экспресс-анкета (автокредит)</a></li>\n                        <li><a href=\"/personal/credits/251823/\" class=\"\">Заявление-анкета (автокредит)</a></li>\n                        <li><a href=\"/personal/credits/128279/\" class=\"\">ПОТРЕБИТЕЛЬСКОЕ КРЕДИТОВАНИЕ</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_1\" onclick=\"toggleAMenu('1');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_1\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/invest_savings/\">Сбережения и инвестиции</a></div>\n    </li>\n                    <ul id=\"ul_m_1\" class=\"no-act \" >\n                        <li><a href=\"/personal/invest_savings/deposits/\" class=\"\">Вклады</a></li>\n                        <li><a href=\"/personal/invest_savings/216/\" class=\"\">Доверительное управление (ОФБУ, ПИФы, индивидуальные стратегии)</a></li>\n                        <li><a href=\"/personal/invest_savings/179550/\" class=\"\">Обезличенные металлические счета</a></li>\n                        <li><a href=\"/personal/invest_savings/91955/\" class=\"\">Продажа драгоценных металлов в слитках</a></li>\n                        <li><a href=\"/personal/invest_savings/214/\" class=\"\">Индивидуальные банковские сейфы</a></li>\n                        <li><a href=\"/personal/invest_savings/coins/\" class=\"\">Продажа монет</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_2\" onclick=\"toggleAMenu('2');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_2\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/brokerage/\">Брокерское обслуживание</a></div>\n    </li>\n                    <ul id=\"ul_m_2\" class=\"no-act \" >\n                        <li><a href=\"/personal/brokerage/107797/\" class=\"\">Инструменты и рынки</a></li>\n                        <li><a href=\"/personal/brokerage/107786/\" class=\"\">Технологии и безопасность</a></li>\n                        <li><a href=\"/personal/brokerage/107795/\" class=\"\">Маржинальная торговля</a></li>\n                        <li><a href=\"/personal/brokerage/107791/\" class=\"\">Инвестиционные идеи</a></li>\n                        <li><a href=\"/personal/brokerage/107793/\" class=\"\">Продукты и тарифы</a></li>\n                        <li><a href=\"/personal/brokerage/107789/\" class=\"\">Качественное обслуживание</a></li>\n                        <li><a href=\"/personal/brokerage/107800/\" class=\"\">Контактная информация</a></li>\n                        <li><a href=\"/personal/brokerage/468/\" class=\"\">Информационно-торговая система GPB-i-Trade</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_3\" onclick=\"toggleAMenu('3');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_3\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/bank_cards/\">Банковские карты</a></div>\n    </li>\n                    <ul id=\"ul_m_3\" class=\"no-act \" >\n                        <li><a href=\"/personal/bank_cards/cards/\" class=\"\">Банковские карты ГПБ</a></li>\n                        <li><a href=\"/personal/bank_cards/159174/\" class=\"\">Заявка на кредитную карту</a></li>\n                        <li><a href=\"/personal/bank_cards/faq/\" class=\"\">Вопрос - ответ</a></li>\n                        <li><a href=\"/personal/bank_cards/121124/\" class=\"\">Переводы денежных средств с карты на карту</a></li>\n                        <li><a href=\"/personal/bank_cards/67073/\" class=\"\">Проведение платежей в сети Интернет</a></li>\n                        <li><a href=\"/personal/bank_cards/310/\" class=\"\"> Дополнительные услуги</a></li>\n                        <li><a href=\"/personal/bank_cards/185209/\" class=\"\">Объединенная расчетная система</a></li>\n                        <li><a href=\"/personal/bank_cards/474/\" class=\"\">Полезные советы держателям банковских карт</a></li>\n                        <li><a href=\"/personal/bank_cards/167695/\" class=\"\">Платежные реквизиты для переводов на банковскую карту</a></li>\n                        <li><a href=\"/personal/bank_cards/157087/\" class=\"\">Ваша безопасность</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_4\" onclick=\"toggleAMenu('4');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_4\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/tc/\">Система &quot;Телекард&quot;</a></div>\n    </li>\n                    <ul id=\"ul_m_4\" class=\"no-act \" >\n                        <li><a href=\"/personal/tc/59322/\" class=\"\">Подробно о системе &quot;Телекард&quot;</a></li>\n                        <li><a href=\"/personal/tc/58889/\" class=\"\">Правила и условия использования системы</a></li>\n                        <li><a href=\"/personal/tc/152281/\" class=\"\">Новые услуги</a></li>\n                        <li><a href=\"/personal/tc/160512/\" class=\"\">SMS-информирование</a></li>\n                        <li><a href=\"/personal/tc/58896/\" class=\"\">Приложение для мобильных телефонов J2ME-мидлет и Windows Mobile</a></li>\n                        <li><a href=\"/personal/tc/128300/\" class=\"\">Приложение для мобильных телефонов iPhone и Android</a></li>\n                        <li><a href=\"/personal/tc/59337/\" class=\"\">Загрузка Приложений системы &quot;Телекард&quot; </a></li>\n                        <li><a href=\"/personal/tc/59341/\" class=\"\">Памятка для пользователей</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_5\" onclick=\"toggleAMenu('5');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_5\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/hb/\">Система &quot;Домашний Банк&quot;</a></div>\n    </li>\n                    <ul id=\"ul_m_5\" class=\"no-act \" >\n                        <li><a href=\"/personal/hb/63540/\" class=\"\">Подробно о системе</a></li>\n                        <li><a href=\"/personal/hb/65343/\" class=\"\">Вопрос - ответ</a></li>\n                        <li><a href=\"/personal/hb/66054/\" class=\"\">Перечень операций, доступных в системе </a></li>\n                        <li><a href=\"/personal/hb/66268/\" class=\"\">Правила и условия использования системы</a></li>\n                        <li><a href=\"/personal/hb/65316/\" class=\"\">Загрузка Приложения MOBIPASS</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_6\" onclick=\"toggleAMenu('6');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_6\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/personal/operations/\">Финансовые операции</a></div>\n    </li>\n                    <ul id=\"ul_m_6\" class=\"no-act \" >\n                        <li><a href=\"/personal/operations/481/\" class=\"\">Операции по счетам</a></li>\n                        <li><a href=\"/personal/operations/423/\" class=\"\">Выплата дивидендов</a></li>\n                        <li><a href=\"/personal/operations/448/\" class=\"\">Депозитарные услуги</a></li>\n                        <li><a href=\"/personal/investor_calendar/\" class=\"\">Календарь инвестора</a></li>\n                        <li><a href=\"/personal/operations/471/\" class=\"\">Денежные переводы</a></li>\n                        <li><a href=\"/personal/operations/21061/\" class=\"\">Дорожные чеки American Express</a></li>\n                </ul>\n            <li class=\"firstLiPad \">\n        <div class=\"markerUp\"><a href=\"\" id=\"a_m_7\" onclick=\"toggleAMenu('7');return false;\"><img src=\"/images/arrow_7.gif\" id=\"i_m_7\" alt=\"\" /></a></div><div class=\"\" ><a href=\"/private_banking/\">Private Banking</a></div>\n    </li>\n    </ul>\n<div class=\"clear-l\"></div>\n                    </div>\n                    <div class=\"bl-b\"><img src=\"/images/menu_l_b.gif\" alt=\"\" class=\"bl-b\" /></div>\n                </div>\n                    <script src=\"/bitrix/components/lenvendo/currency.course/templates/.default/script.js?1284791341\" type=\"text/javascript\"></script><div class=\"quotations mT-15\">\n        <p>Курс на <b>16.04.2013 8:30</b></p>\n            \n    <div class=\"one\">&nbsp;</div>\n    <div class=\"two\"><span class=\"ligtGrey\">покупка</span></div>\n    <div class=\"three\"><span class=\"ligtGrey\">продажа</span></div>\n    <div class=\"four\"><span class=\"ligtGrey\">ЦБ РФ</span></div>\n    <div class=\"clear-l\"></div>\n                            <div class=\"one\"><b>USD</b></div>\n            <div class=\"two\"><span class=\"grey\">30.85</span></div>\n            <div class=\"three\"><span class=\"grey\">31.75</span></div>\n            <div class=\"four\">\n                <span class=\"green\">31.3051</span>\n                <span class=\"green\" style=\"font-size: 11px; padding-left: 10px; background: url(/images/arrow_3.gif) no-repeat top left;\">+0.3743</span>\n            </div>\n                                <div class=\"clear-l\"></div>\n            <div class=\"one\"><b>EUR</b></div>\n            <div class=\"two\"><span class=\"grey\">40.45</span></div>\n            <div class=\"three\"><span class=\"grey\">41.40</span></div>\n                        <div class=\"four\">\n                <span class=\"green\">40.9283</span>\n                <span class=\"green\" style=\"font-size: 11px; padding-left: 10px; background: url(/images/arrow_3.gif) no-repeat top left;\">+0.4151</span>\n            </div>\n                                                        <div class=\"clear-l\"></div>\n                <div class=\"one\"><b>GBP</b></div>\n                <div class=\"two\"><span class=\"grey\">46.65</span></div>\n                <div class=\"three\"><span class=\"grey\">49.10</span></div>\n                                <div class=\"four\">\n                    <span class=\"green\">48.0001</span>\n                    <span class=\"green\" style=\"font-size: 11px; padding-left: 10px; background: url(/images/arrow_3.gif) no-repeat top left;\">+0.4378</span>\n                </div>\n                                                    <div class=\"clear-l\"></div>\n                <div class=\"one\"><b>CHF</b></div>\n                <div class=\"two\"><span class=\"grey\">32.65</span></div>\n                <div class=\"three\"><span class=\"grey\">34.35</span></div>\n                                <div class=\"four\">\n                    <span class=\"green\">33.6759</span>\n                    <span class=\"green\" style=\"font-size: 11px; padding-left: 10px; background: url(/images/arrow_3.gif) no-repeat top left;\">+0.499</span>\n                </div>\n                                <div class=\"clear-l\"></div>\n    <div class=\"mT\">\n        <img src=\"/images/img_4.gif\" alt=\"\" class=\"marker\" />\n            <a href=\"\" onclick=\"$('#pop_ov').toggle();$('#conv').toggle();return false;\" class=\"linkConverter\">Конвертер валют</a>\n        <div class=\"popup\" style=\"margin: -200px 0 0 10px;display:none;\" id=\"conv\">\n            <table class=\"\">\n                <tr>\n                    <td class=\"p-t-l\"></td>\n                    <td class=\"p-t\"></td>\n                    <td class=\"p-t-r\"></td>\n                </tr>\n                <tr>\n                    <td class=\"p-l\"><div class=\"d-p-l\" style=\"height: 213px;\"></div></td>\n                    <td class=\"p-bg\">\n\n                        <a href=\"#\"><img src=\"/images/popup_close.gif\" alt=\"Закрыть\" class=\"close\" onclick=\"$('#pop_ov').toggle();$('#conv').toggle();return false;\" /></a>\n                        <h5>Конвертер валют</h5>\n                        <div class=\"clear\"></div>\n                        <div class=\"popupKonvektor\" style=\"width: 364px;\">\n                            <div class=\"field\">\n                                <div class=\"fieldName\" style=\"width: 164px;\"><img src=\"/images/img_rus.gif\" alt=\"\" />Российский рубль</div>\n                                <input type=\"text\" style=\"text-align: right;\" onkeyup=\"clean_field('RUR');\" name=\"RUR\" id=\"RUR\" value=\"\" />\n                                <img src=\"/images/img_rus_val.gif\" alt=\"\" />\n\n                            </div>\n                                                        <div class=\"field\">\n                                <div class=\"fieldName\" style=\"width: 164px;\"><img width=\"16\" height=\"14\" src=\"/images/img_usd.gif\" alt=\"\" />Доллар США</div>\n                                <input type=\"text\" style=\"text-align: right;\" onkeyup=\"clean_field('USD');\" name=\"USD\" id=\"USD\" value=\"\" />\n                                <img src=\"/images/img_usd_val.gif\" alt=\"\" />\n                            </div>\n                                                        <div class=\"field\">\n                                <div class=\"fieldName\" style=\"width: 164px;\"><img width=\"16\" height=\"14\" src=\"/images/img_eur.gif\" alt=\"\" />Евро</div>\n                                <input type=\"text\" style=\"text-align: right;\" onkeyup=\"clean_field('EUR');\" name=\"EUR\" id=\"EUR\" value=\"\" />\n                                <img src=\"/images/img_eur_val.gif\" alt=\"\" />\n                            </div>\n                                                        <div class=\"field\">\n                                <div class=\"fieldName\" style=\"width: 164px;\"><img width=\"16\" height=\"14\" src=\"/images/img_gbp.gif\" alt=\"\" />Фунт стерлингов Соединенного королевства</div>\n                                <input type=\"text\" style=\"text-align: right;\" onkeyup=\"clean_field('GBP');\" name=\"GBP\" id=\"GBP\" value=\"\" />\n                                <img src=\"/bitrix/images/1.gif\" alt=\"\" />\n                            </div>\n                                                        <div class=\"field\">\n                                <div class=\"fieldName\" style=\"width: 164px;\"><img width=\"16\" height=\"14\" src=\"/images/img_chf.gif\" alt=\"\" />Швейцарский франк</div>\n                                <input type=\"text\" style=\"text-align: right;\" onkeyup=\"clean_field('CHF');\" name=\"CHF\" id=\"CHF\" value=\"\" />\n                                <img src=\"/bitrix/images/1.gif\" alt=\"\" />\n                            </div>\n                                                        <div class=\"count\">\n                                <img src=\"/images/img_18.gif\" alt=\"\" />\n                                <a href=\"#\" onclick=\"convert();return false;\">Пересчитать</a>\n                            </div>\n                            <!--<span>По состоянию на 20:59, 16.04.13</span>-->\n                        </div>\n\n                    </td>\n                    <td class=\"p-r\"><div class=\"d-p-r\" style=\"height: 213px;\"></div></td>\n                </tr>\n                <tr>\n                    <td class=\"p-b-l\"></td>\n                    <td class=\"p-b\"></td>\n                    <td class=\"p-b-r\"></td>\n                </tr>\n            </table>\n        </div>\n\n    </div>\n    </div>\n<div class=\"actions\">\n    <p>Акции <img src=\"/images/icon_gpb.gif\" alt=\"ГазПромБанк\" /> ОАО <a href=\"http://www.gazprom.ru/\">«Газпром»</a>\n        <br /> 16.04.2013 09:00</p>\n    <div class=\"two\"><span class=\"ligtGrey\">покупка</span></div>\n    <div class=\"three\"><span class=\"ligtGrey\">продажа</span></div>\n    <div class=\"clear-l\"></div>\n            <div class=\"two\"><span class=\"grey\">121.00</span></div>\n        <div class=\"three\"><span class=\"grey\">131.00</span></div>\n        <br clear=\"all\" />\n    <br clrar=\"all\" />\n</div>\n    <div class=\"quotations mT-15\"><span class=\"ligtGrey\">информация о курсах не является офертой (ст. 437 ГК РФ)</span></div>\n            </div>\n\n            <div class=\"pageCenter\" >\n                <div class=\"m-bl m-bl-orange\">\n                    <div class=\"m-bl-t\">\n                        <div class=\"img-r\"><img src=\"/images/orange_t_r.gif\" alt=\"\" /></div>\n                        <div class=\"img-l\"><img src=\"/images/orange_t_l.gif\" alt=\"\" /></div>\n                    </div>\n                    <div class=\"border\">\n                        \n<div class=\"text\">\n  <h1>Тарифы/Котировки</h1>\n\n  <p><font size=\"1\">Для просмотра тарифов, действующих в вашем городе, зайдите на страницу соответствующего филиала через &laquo;<strong>Выбор города</strong>&raquo; (в правом верхнем углу страницы).</font> </p>\n\n  <p>  <div class=\"cal\" style=\"width:95%;height:80px;\">\n<div class=\"calNav\">\n            <a href=\"/personal/tariffs/index.php?month=09&amp;year=2011&amp;s_code=382\" title=\"2011\"><img src=\"/images/arrow_4.gif\" alt=\"\" /></a>\n        \n    <a href=\"/personal/tariffs/index.php?year=2012&s_code=382\">2012</a>\n            <a href=\"/personal/tariffs/index.php?month=09&amp;year=2013&amp;s_code=382\" title=\"2013\"><img src=\"/images/arrow_5.gif\" alt=\"\" /></a>\n        &nbsp;&nbsp;&nbsp;&nbsp;    \n            <a href=\"/personal/tariffs/index.php?month=08&amp;year=2012&amp;s_code=382\" title=\"Август\"><img src=\"/images/arrow_4.gif\" alt=\"\" /></a>\n        <a href=\"/personal/tariffs/index.php?month=9&year=2012&s_code=382\">\n                Сентябрь</a>\n            <a href=\"/personal/tariffs/index.php?month=10&amp;year=2012&amp;s_code=382\" title=\"Октябрь\"><img src=\"/images/arrow_5.gif\" alt=\"\" /></a>\n    </div>\n<ul>\n            <li>\n            <span >Пн</span>\n            <p>\n                                \n                    27                          </p>\n        </li>\n            <li>\n            <span >Вт</span>\n            <p>\n                                \n                    28                          </p>\n        </li>\n            <li>\n            <span >Ср</span>\n            <p>\n                                \n                    29                          </p>\n        </li>\n            <li>\n            <span >Чт</span>\n            <p>\n                                \n                    30                          </p>\n        </li>\n            <li>\n            <span >Пт</span>\n            <p>\n                                \n                    31                          </p>\n        </li>\n            <li>\n            <span class=\"pink\">Сб</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=1&month=9&year=2012&s_code=382\">\n                                \n                    1                               </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Вс</span>\n            <p>\n                                \n                    2                           </p>\n        </li>\n                <li>\n            <span >Пн</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=3&month=9&year=2012&s_code=382\">\n                                \n                    3                               </a>\n                            </p>\n        </li>\n            <li>\n            <span >Вт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=4&month=9&year=2012&s_code=382\">\n                                \n                    4                               </a>\n                            </p>\n        </li>\n            <li>\n            <span >Ср</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=5&month=9&year=2012&s_code=382\">\n                                \n                    5                               </a>\n                            </p>\n        </li>\n            <li>\n            <span >Чт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=6&month=9&year=2012&s_code=382\">\n                                \n                    6                               </a>\n                            </p>\n        </li>\n            <li>\n            <span >Пт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=7&month=9&year=2012&s_code=382\">\n                                \n                    7                               </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Сб</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=8&month=9&year=2012&s_code=382\">\n                                \n                    8                               </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Вс</span>\n            <p>\n                                \n                    9                           </p>\n        </li>\n                <li>\n            <span >Пн</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=10&month=9&year=2012&s_code=382\">\n                                \n                    10                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Вт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=11&month=9&year=2012&s_code=382\">\n                                \n                    11                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Ср</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=12&month=9&year=2012&s_code=382\">\n                                \n                    12                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Чт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=13&month=9&year=2012&s_code=382\">\n                                \n                    13                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Пт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=14&month=9&year=2012&s_code=382\">\n                                \n                    14                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Сб</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=15&month=9&year=2012&s_code=382\">\n                                \n                    15                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Вс</span>\n            <p>\n                                \n                    16                          </p>\n        </li>\n                <li>\n            <span >Пн</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=17&month=9&year=2012&s_code=382\">\n                                \n                    17                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Вт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=18&month=9&year=2012&s_code=382\">\n                                \n                    18                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Ср</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=19&month=9&year=2012&s_code=382\">\n                                \n                    19                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Чт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=20&month=9&year=2012&s_code=382\">\n                                \n                    20                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Пт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=21&month=9&year=2012&s_code=382\">\n                                \n                    21                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Сб</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=22&month=9&year=2012&s_code=382\">\n                                \n                    22                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Вс</span>\n            <p>\n                                \n                    23                          </p>\n        </li>\n                <li>\n            <span >Пн</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=24&month=9&year=2012&s_code=382\">\n                                \n                    24                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Вт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=25&month=9&year=2012&s_code=382\">\n                                \n                    25                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Ср</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=26&month=9&year=2012&s_code=382\">\n                                \n                    26                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Чт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=27&month=9&year=2012&s_code=382\">\n                                \n                    27                              </a>\n                            </p>\n        </li>\n            <li>\n            <span >Пт</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=28&month=9&year=2012&s_code=382\">\n                                \n                    28                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Сб</span>\n            <p>\n                                <a href=\"/personal/tariffs/index.php?day=29&month=9&year=2012&s_code=382\">\n                                \n                    29                              </a>\n                            </p>\n        </li>\n            <li>\n            <span class=\"pink\">Вс</span>\n            <p>\n                                \n                    30                          </p>\n        </li>\n            \n</ul>\n\n</div>\n  <script src=\"/bitrix/components/lenvendo/new.document.list/templates/.default/script.js?1259248909\" type=\"text/javascript\"></script><script language=\"JavaScript\" type=\"text/javascript\">\nfunction show_docs(id){\n     $(\"#d_\"+id).toggleClass(\"act\");\n     if(document.getElementById(\"list_d_\"+id).style.display ==\"none\"){\n        document.getElementById(\"list_d_\"+id).style.display=\"\";\n     }else{\n        document.getElementById(\"list_d_\"+id).style.display=\"none\";\n     }\n}\n\nfunction show_sub_docs(id){\n     $(\"#s_d_\"+id).toggleClass(\"act\");\n     if(document.getElementById(\"list_s_d_\"+id).style.display ==\"none\"){\n        document.getElementById(\"list_s_d_\"+id).style.display=\"\";\n     }else{\n        document.getElementById(\"list_s_d_\"+id).style.display=\"none\";\n     }\n}\n</script>\n<div class=\"text\">\n<ul class=\"doc\">\n        <li><a href=\"#\" id=\"d_382\" onclick=\"show_docs('382');return false;\" class=\"act\">Котировки обезличенных драгоценных металлов (ОМС) для физических лиц</a>\n            <ul class=\"doc\" id=\"list_d_382\" style=\"display:\">\n                                            <li>\n                                                        <a href=\"/upload/iblock/c34/price_oms_01102012.pdf\">Котировки ОМС на 29.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.71 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/1a3/price_oms_28092012.pdf\">Котировки ОМС на 28.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            65.07 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/083/price_oms_27092012.pdf\">Котировки ОМС на 27.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/635/price_oms_26092012.pdf\">Котировки ОМС на 26.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.92 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/d14/price_oms_25092012.pdf\">Котировки ОМС на 25.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.85 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/498/price_oms_240920121.pdf\">Котировки ОМС на 24.09.2012 (17:30)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.51 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/3c0/price_oms_24092012.pdf\">Котировки ОМС на 24.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.61 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/48b/price_oms_22092012.pdf\">Котировки ОМС на 22.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.61 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/0b3/price_oms_21092012.pdf\">Котировки ОМС на 21.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/67e/price_oms_20092012.pdf\">Котировки ОМС на 20.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/bc5/price_oms_19092012.pdf\">Котировки ОМС на 19.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.63 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/47b/price_oms_18092012.pdf\">Котировки ОМС на 18.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            65.07 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/a62/price_oms_17092012.pdf\">Котировки ОМС на 17.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.99 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/f92/price_oms_15092012.pdf\">Котировки ОМС на 15.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            65 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/918/price_oms_14092012_3.pdf\">Котировки ОМС на 14.09.2012 (14:50)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.95 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/76c/price_oms_14092012_2.pdf\">Котировки ОМС на 14.09.2012 (09:30)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/0c2/price_oms_14092012.pdf\">Котировки ОМС на 14.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.53 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/2ea/price_oms_13092012.pdf\">Котировки ОМС на 13.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/99b/price_oms_12092012.pdf\">Котировки ОМС на 12.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/64e/price_oms_11092012_2.pdf\">Котировки ОМС на 11.09.2012 (02:00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/b9a/price_oms_10092012_2.pdf\">Котировки ОМС на 10.09.2012 (09.35)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/d41/price_oms_10092012.pdf\">Котировки ОМС на 10.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            81.04 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/04f/price_oms_08092012.pdf\">Котировки ОМС на 08.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            81.04 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/2c4/price_oms_07092012_2.pdf\">Котировки ОМС на 07.09.2012 (15.10)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.95 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/77f/price_oms_07092012.pdf\">Котировки ОМС на 07.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.64 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/8cb/price_oms_06092012.pdf\">Котировки ОМС на 06.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.92 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/8a5/price_oms_05092012.pdf\">Котировки ОМС на 05.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.94 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/158/price_oms_04092012.pdf\">Котировки ОМС на 04.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.63 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/ec5/price_oms_030920121.pdf\">Котировки ОМС на 03.09.2012 (10.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            80.54 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/737/price_oms_03092012.pdf\">Котировки ОМС на 03.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.68 Кб                                                        \n                    </li>\n                                <li>\n                                                        <a href=\"/upload/iblock/7e8/price_oms_01092012.pdf\">Котировки ОМС на 01.09.2012 (02.00)</a>\n                            <img src=\"/images/img_pdf.gif\" alt=\"PDF\" title=\"PDF\" />\n                            PDF,\n                            64.69 Кб                                                        \n                    </li>\n                                    </ul>\n    </li>\n    </ul>\n</div> </p>\n</div>\n<div class=\"text\">\n    <div class=\"font-size mT-0\">\n            <div class=\"font-size-link\">\n        <a href=\"#\" class=\"act f-s-8\" onclick=\"resize(this); return false;\" id=\"ts_s\">A</a>\n        <a href=\"#\" class=\"f-s-10\" onclick=\"resize(this); return false;\" id=\"ts_m\">A</a>\n        <a href=\"#\" class=\"f-s-12\" onclick=\"resize(this); return false;\"  id=\"ts_b\">A</a>\n            </div>\n                    </div>\n</div>\n</div>\n                    <div class=\"m-bl-b\">\n                        <div class=\"img-r\"><img src=\"/images/orange_b_r.gif\" alt=\"\" /></div>\n\n                        <div class=\"img-l\"><img src=\"/images/orange_b_l.gif\" alt=\"\" /></div>\n                    </div>\n                </div>\n        <div class=\"m-bl mT-25\" id=\"banner_bar\">\n            <div class=\"m-bl-t\">\n                <div class=\"img-r\"><img src=\"/images/t_r.gif\" alt=\"\" /></div>\n                <div class=\"img-l\"><img src=\"/images/t_l.gif\" alt=\"\" /></div>\n            </div>\n                \n            <div class=\"border\">\n                <table width=\"100%\">\n                    <tr>\n                        <td width=\"50%\" class=\"pL-4\">\n                        <div id=\"comp_7771641b219791f47af48b753e0d5757\">\n<style>\n    .banner_0a115 {\n        display: none;\n    }\n\n    .active_0a115 {\n        display: block;\n    }\n</style>\n<div id=\"cont_0a115\">\n    <div class=\"banner_0a115 active_0a115\"><a href=\"/bitrix/rk.php?id=14&amp;event1=%D0%B0%D1%8D%D1%80%D0%BE%D1%84%D0%BB%D0%BE%D1%82&amp;event2=click&amp;event3=5+%2F+%5B14%5D+%5BBANNER_1%5D+%D0%B0%D1%8D%D1%80%D0%BE%D1%84%D0%BB%D0%BE%D1%82&amp;goto=%2Fpersonal%2Fbank_cards%2Fcards%2F21436%2F\" target=\"_self\" ><img alt=\"Совместная карта ГПБ и Аэрофлот\"  title=\"Совместная карта ГПБ и Аэрофлот\" src=\"/upload/rk/f68/f6828f3daa232317c9d3a2c341fdffee.gif\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n    <div class=\"banner_0a115\"><a href=\"/bitrix/rk.php?id=105&amp;event1=%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%B0%D1%8D%D1%80%D0%BE&amp;event2=click&amp;event3=52+%2F+%5B105%5D+%5BBANNER_1%5D+%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%B0%D1%8D%D1%80%D0%BE&amp;goto=%2Fpersonal%2Fbank_cards%2Fcards%2F\" target=\"_blank\" ><img alt=\"&quot;Газпромбанк - Трансаэро&quot;\"  title=\"&quot;Газпромбанк - Трансаэро&quot;\" src=\"/upload/rk/dec/.jpg\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n    <div class=\"banner_0a115\"><a href=\"/bitrix/rk.php?id=147&amp;event1=%D1%83%D1%80%D0%B0%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5+%D0%B0%D0%B2%D0%B8%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8&amp;event2=click&amp;event3=68+%2F+%5B147%5D+%5BBANNER_1%5D+%D1%83%D1%80%D0%B0%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5+%D0%B0%D0%B2%D0%B8%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8&amp;goto=%2Fpersonal%2Fbank_cards%2Fcards%2F141625%2F\" target=\"_blank\" ><img alt=\"Карта &quot;Газпромбанк - Уральские авиалинии&quot;\"  title=\"Карта &quot;Газпромбанк - Уральские авиалинии&quot;\" src=\"/upload/rk/c3d/ural-avia2.jpg\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n    <div class=\"banner_0a115\"><a href=\"/bitrix/rk.php?id=99&amp;event1=%D0%B1%D1%80%D0%BE%D0%BA%D0%B5%D1%80%D1%81%D0%BA%D0%BE%D0%B5+%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&amp;event2=click&amp;event3=40+%2F+%5B99%5D+%5BBANNER_1%5D+%D0%B1%D1%80%D0%BE%D0%BA%D0%B5%D1%80%D1%81%D0%BA%D0%BE%D0%B5+%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&amp;goto=%2Fpersonal%2Fbrokerage%2F\" target=\"_blank\" ><img alt=\"Брокерское обслуживание\"  title=\"Брокерское обслуживание\" src=\"/upload/rk/219/ xiwntxtzihxvlacyateidnjf_twmywmytvuho.jpg\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n    <div class=\"banner_0a115\"><a href=\"/bitrix/rk.php?id=146&amp;event1=%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D0%BA%D1%80%D0%B5%D0%B4%D0%BA%D0%B0%D1%80%D1%82%D1%8B-%D0%B2%D0%BD%D1%83%D1%82%D1%80&amp;event2=click&amp;event3=67+%2F+%5B146%5D+%5BBANNER_1%5D+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D0%BA%D1%80%D0%B5%D0%B4%D0%BA%D0%B0%D1%80%D1%82%D1%8B&amp;goto=%2Fpersonal%2Fbank_cards%2F159174%2F\"><img alt=\"Заявка на выпуск кредитной карты\"  title=\"Заявка на выпуск кредитной карты\" src=\"/upload/rk/7d4/zayavka_cred_carta.jpg\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n</div>\n<script type=\"text/javascript\">\n    var i0a115 = self.setInterval(\"LV0a115()\", 9000);\n\n    function LV0a115() {\n        var oActive = $(\"#cont_0a115 > .active_0a115\");\n\n        if (oActive.next().length > 0) {\n            oActive.removeClass('active_0a115');\n            oActive.next().addClass('active_0a115');\n        } else {\n            oActive.removeClass('active_0a115');\n            oActive.parent().children().eq(0).addClass('active_0a115');\n        }\n    }\n</script>\n</div>                      </td>\n                        <td width=\"50%\" class=\"pL-4\">\n                        <div id=\"comp_ae8eaa22e8feb6f47c4c17bd2a88bf12\">\n<style>\n    .banner_f586d {\n        display: none;\n    }\n\n    .active_f586d {\n        display: block;\n    }\n</style>\n<div id=\"cont_f586d\">\n    <div class=\"banner_f586d active_f586d\"><a href=\"/bitrix/rk.php?id=164&amp;event1=banner&amp;event2=click&amp;event3=76+%2F+%5B164%5D+%5BBANNER_2%5D+%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D0%B0%D1%8F+%D0%BA%D0%B0%D1%80%D1%82%D0%B0&amp;goto=%2Fpersonal%2Fbank_cards%2Fcards%2F242533%2F\"><img alt=\"\"  title=\"\" src=\"/upload/rk/92b/banner_podaroch_karta_gif5.gif\" width=\"229\" height=\"110\" border=\"0\" /></a></div>\n</div>\n</div>                      </td>\n                    </tr>\n                </table>\n            </div>\n            <script>\n            if ($(\"#banner_bar\").height() < 30) {\n                $(\"#banner_bar\").hide();\n            }\n            </script>\n            <div class=\"m-bl-b\">\n                <div class=\"img-r\"><img src=\"/images/b_r.gif\" alt=\"\" /></div>\n                <div class=\"img-l\"><img src=\"/images/b_l.gif\" alt=\"\" /></div>\n            </div>\n        </div>\n\n            </div>\n        </div>\n</div>\n\n    <div class=\"clear\"></div>\n    <div class=\"footerMainContent\"></div>\n    <div class=\"clear\"></div>\n</div>\n<div class=\"min-max\">\n        <div class=\"clear\"></div>\n        <div class=\"footer\">\n            <div class=\"footerRight\">\n            <table border=\"0\" cellspacing=\"1\" cellpadding=\"1\" width=\"100&#37;\">\n  <tbody>\n    <tr><td><a href=\"/index.php\" ><img title=\"На главную страницу\" border=\"0\" alt=\"На главную страницу\" src=\"/images/house_act.gif\" width=\"11\" height=\"10\" /></a></td><td><a href=\"/search/\" ><img title=\"Поиск\" border=\"0\" alt=\"Поиск\" src=\"/images/opacity.gif\" /></a></td><td><a href=\"/feedback/\" ><img title=\"Обратная связь\" border=\"0\" alt=\"Обратная связь\" src=\"/images/letter.gif\" /></a></td><td><a href=\"/search/\" ><img title=\"Карта сайта\" border=\"0\" alt=\"Карта сайта\" src=\"/images/sitemap/map_2.png\" /></a></td></tr>\n  </tbody>\n</table>\n            </div>\n            <div class=\"footerLeft\">\n                <div class=\"footerContent\">\n    \n                    <div class=\"m-bl\">\n                        <div class=\"m-bl-t\">\n                            <div class=\"img-r\"><img src=\"/images/t_r.gif\" alt=\"\" /></div>\n                        </div>\n                    </div>\n                    <p class=\"fl\">\n<a target=\"_blank\" href=\"http://www.lenvendo.ru/\">Разработка&nbsp;сайта</a> &ndash; компания Lenvendo</p>\n                                                            <div class=\"mobileVersion\"><img src=\"/images/img_7.gif\" alt=\"\" /> <a href=\"http://pda.gazprombank.ru\">Мобильная версия</a></div>\n                                        <p class=\"mL\">&copy; <b>2013 ГПБ (ОАО)</b></p>\n                                                        </div>\n            </div>\n        </div>\n</div>\n</body>\n</html>",
+			"settings":
+			{
+				"buffer_size": 80156,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/rzaytsev/src/google-python-exercises/copyspecial/copyspecial.py",
+			"settings":
+			{
+				"buffer_size": 2030,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.py",
+			"settings":
+			{
+				"buffer_size": 2254,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"set ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"s bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"s ba",
+				"Set Syntax: Batch File"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"pr",
+				"Package Control: Remove Package"
+			],
+			[
+				"PI",
+				"Package Control: Install Package"
+			],
+			[
+				"pu",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"set mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"set bas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ss p",
+				"Set Syntax: Python"
+			],
+			[
+				"ss py",
+				"Set Syntax: Python"
+			],
+			[
+				"ma",
+				"Markdown Preview: preview in Sublime Text"
+			],
+			[
+				"mark",
+				"Markdown Preview: open Markdown Cheat sheet"
+			],
+			[
+				"set py",
+				"Set Syntax: Python"
+			],
+			[
+				"PR",
+				"Package Control: Remove Package"
+			],
+			[
+				"PI ",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 379.0,
+		"history":
+		[
+			"\\",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/rzaytsev/src/oms-gpb/templates/metal.html",
+		"/Users/rzaytsev/src/oms-gpb/templates/login.html",
+		"/Users/rzaytsev/src/oms-gpb/templates/page2.html",
+		"/usr/share/vim/vimrc",
+		"/Users/rzaytsev/src/metals/templates/login.html",
+		"/Users/rzaytsev/src/metals/templates/metal.html",
+		"/Users/rzaytsev/.ssh/known_hosts",
+		"/Users/rzaytsev/.ssh/config",
+		"/Users/rzaytsev/src/metals/templates/page2.html",
+		"/Users/rzaytsev/.gitignore_global",
+		"/Users/rzaytsev/.gitconfig",
+		"/Users/rzaytsev/src/metals/.git/COMMIT_EDITMSG",
+		"/Users/rzaytsev/src/metals/gazprom.py",
+		"/Users/rzaytsev/src/metals/read-db.py",
+		"/Users/rzaytsev/src/metals/index.py",
+		"/Users/rzaytsev/src/metals/templates/page1.html",
+		"/Users/rzaytsev/src/metals/static/template.html",
+		"/Users/rzaytsev/src/google-python-exercises/copyspecial/copyspecial.py",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/rzaytsev/src/little redis book.mdown",
+		"/Users/rzaytsev/src/redis-2.6.12/README",
+		"/Users/rzaytsev/src/redis-2.6.12/INSTALL",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/python-iTerm2.sublime-build",
+		"/Users/rzaytsev/src/st-build-python-iterm.sh",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/AutoPEP8/Default (OSX).sublime-keymap",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/Users/rzaytsev/src/google-python-exercises/babynames/babynames.py",
+		"/Users/rzaytsev/src/google-python-exercises/babynames/solution/babynames.py",
+		"/Users/rzaytsev/.zshrc",
+		"/Users/rzaytsev/src/google-python-exercises/babynames/baby1990.html.summary",
+		"/Users/rzaytsev/src/google-python-exercises/babynames/baby1990.htmlsummary",
+		"/Users/rzaytsev/Dropbox/notes/Металлы.txt",
+		"/Users/rzaytsev/src/google-python-exercises/basic/solution/list1.py",
+		"/Users/rzaytsev/src/google-python-exercises/basic/string1.py",
+		"/Users/rzaytsev/src/google-python-exercises/basic/solution/string1.py",
+		"/Users/rzaytsev/src/google-python-exercises/basic/string",
+		"/Users/rzaytsev/src/google-python-exercises/hello.py",
+		"/Users/rzaytsev/src/docs delegatskaya/todo.taskpaper",
+		"/Users/rzaytsev/Documents/Делегатская7/new/untitled.mdown",
+		"/Users/rzaytsev/src/docs delegatskaya/Документация - структура.txt",
+		"/Users/rzaytsev/src/docs delegatskaya/мониторинг.mdown",
+		"/Users/rzaytsev/src/docs delegatskaya/vm-secretary1.txt",
+		"/Volumes/untitled/Serial.txt",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/DetectSyntax/DetectSyntax.sublime-settings",
+		"/Users/rzaytsev/Documents/Делегатская7/insor/servers.md",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/sample.md",
+		"/tmp/subl stdin 8znVLR.txt",
+		"/Users/rzaytsev/st",
+		"/Users/rzaytsev/Documents/Делегатская7/insor/63b41.jpg#1089.6x1295",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.py",
+		"/Users/rzaytsev/Documents/Делегатская7/delegatskaya7.sublime-project",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/rzaytsev/src/diveintopython3/humansize.py",
+		"/Users/rzaytsev/src/diveintopython3/my_examples/plural4-rules.txt",
+		"/Users/rzaytsev/src/python/hello.py",
+		"/Users/rzaytsev/src/persons_model.php",
+		"/Users/rzaytsev/src/dive_into_python/humansize.py",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/rsub/rsub.sublime-settings",
+		"/Users/rzaytsev/Library/Application",
+		"/Users/rzaytsev/src/dive_into_python/Support/Sublime",
+		"/Users/rzaytsev/src/dive_into_python/Text",
+		"/Users/rzaytsev/src/dive_into_python/3/Packages/rsub/rsub.py",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/rsub/rsub.py",
+		"/Volumes/127.0.0.1/CodeIgniter/user_guide/userguide.css",
+		"/Volumes/127.0.0.1/info.php",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Super Calculator/Default (OSX).sublime-keymap",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Inline Calculator/Default (OSX).sublime-keymap",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/Super Calculator.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Super Calculator/Super Calculator.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/rzaytsev/src/powerline-shell/powerline-shell.py",
+		"/Users/rzaytsev/src/oh-my-zsh-powerline-theme/powerline.zsh-theme",
+		"/Users/rzaytsev/powerline-shell.py",
+		"/Users/rzaytsev/src/OF.xml",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/PlainTasks/PlainTasks (OSX).sublime-settings",
+		"/Users/rzaytsev/Dropbox/todo/delegatskaya.taskpaper",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/PlainTasks/tasks-gray.hidden-tmTheme",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/PlainTasks/tasks-dark.hidden-tmTheme.xml",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/rzaytsev/Library/Logs/pip.log",
+		"/Users/rzaytsev/Library/Application Support/Sublime Text 3/Packages/Calculate/calculate.py",
+		"/Users/rzaytsev/src/get-pip.py"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"../assets/",
+			"strftime",
+			"strtotime",
+			"date('d.m.Y',strtotime",
+			"date('d.m.Y',strtotime($birthday)",
+			"alt+space",
+			"view.begin_edit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"static/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "todo.taskpaper",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								182,
+								182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "get-data.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2319,
+								2319
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 709.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 80156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80156,
+								80156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 18275.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/rzaytsev/src/google-python-exercises/copyspecial/copyspecial.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1121,
+								996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 454.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								813,
+								813
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 183.0
+	},
+	"project": "oms-gpb.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
