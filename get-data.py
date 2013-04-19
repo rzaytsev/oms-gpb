@@ -46,7 +46,7 @@ def read_pdf(url):
     # Collapse whitespace
     content = " ".join(content.replace(u"\xa0", " ").strip().split())
     str = content.encode("ascii", "ignore")
-    print 'pdf: ' + content + '\n'
+    #print 'pdf: ' + content + '\n'
     r = []
     if not r:
         for i in str.split(':')[-4:]:
@@ -69,6 +69,7 @@ def main():
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
     links = get_current_links(url)
 
+    print "last update: " +  datetime.datetime.now().strftime("%d %m %Y  %H:%M")
     print "get data from: " + url
     print'--------------------------------------------------------'
 
@@ -76,30 +77,28 @@ def main():
         print link
         date1 = datetime.datetime.strptime(link[1] + ' ' + link[2],'%d.%m.%Y %H:%M')
         ts1 =date1.strftime('%s')
-        try:
-            prices =  read_pdf(link[0])
-            if (not prices == [['']]):
-                s =''
-                for metal in prices:
-                    s += metal[0].strip() + ' - ' +  metal[1].strip()
-                    s += ' - '
-                s = s[0:len(s)-2]
 
-                if r.sadd('days', ts1):
-                    print "add new day"
-                    print 'add: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
-                    print 'prices:' + ts1 + " | " +s
-                    r.set('prices:'+ts1, s)
-                else:
-                    print "alredy exists: " + str(datetime.datetime.fromtimestamp(float(ts1)))
+        prices =  read_pdf(link[0])
+        if (not prices == [['']]):
+            s =''
+            for metal in prices:
+                s += metal[0].strip() + ' - ' +  metal[1].strip()
+                s += ' - '
+            s = s[0:len(s)-2]
 
-                r.setnx('day:'+ts1, s)
-                print'--------------------------------------------------------'
+            if r.sadd('days', ts1):
+                print "add new day"
+                print 'add: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
+                print 'prices:' + ts1 + " | " +s
+                r.set('prices:'+ts1, s)
             else:
-                print "\n\n !!! cannot read pdf file !!! \n\n"
+                print "alredy exists: " + str(datetime.datetime.fromtimestamp(float(ts1)))
 
-        except Exception, e:
-            raise e
+            r.setnx('day:'+ts1, s)
+            print'--------------------------------------------------------'
+        else:
+            print "\n\n !!! cannot read pdf file !!! \n\n"
+
 
 
 
