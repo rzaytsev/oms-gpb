@@ -66,7 +66,9 @@ $(function () {
             $('#container1').highcharts('StockChart', {
                 rangeSelector : { selected : 1  },
                 title : {  text : '{{metal_name}}'    },
-                yAxis : {  title : {  text : 'Цена, руб.'  }, },
+                yAxis : {  title : {  text : 'Цена, руб.'  },
+                {{plotlines | safe }}
+                },
                 series : [{
                     name : 'Покупка ',
                     data : data1,
@@ -89,7 +91,7 @@ $(function () {
 
 
     <p>{{metal_name}}<br> {{ today }} <br> Покупка: {{ buy_price }} <br> Продажа: {{ sell_price }}</p>
-        <div id="container1" style="height: 500px; min-width: 400px"></div>
+        <div id="container1" style="height: 500px; min-width: 300px"></div>
 
 
     </div> <!-- /container -->

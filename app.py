@@ -29,6 +29,10 @@ def start():
 def test():
     return "Hello world!"
 
+@app.route("/log")
+def test():
+    return render_template('update.log')
+
 @app.route("/login")
 def login():
     return render_template('login.html',active_menu=4)
@@ -38,7 +42,9 @@ def get_gold():
     date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y %H:%M')
     buy_price =read_prices_db(0)[-1][1]
     sell_price = read_prices_db(1)[-1][1]
-    return render_template('metal.html', today=date, data_id=0, data_id1=1, metal_name=u'Золото',buy_price=buy_price, sell_price=sell_price, active_menu=2)
+    plotlines = r'''plotLines: [{ color: 'green', width: 2, value: 1600, dashStyle : 'shortdash', label: { text: 'label1'}}, { color: 'yellow', width: 2, value: 1400, dashStyle : 'shortdash', label: { text: 'label2'}} ]'''
+
+    return render_template('metal.html', today=date, data_id=0, data_id1=1, metal_name=u'Золото',buy_price=buy_price, sell_price=sell_price, active_menu=2, plotlines=plotlines)
 
 @app.route("/silver")
 def get_silver():
