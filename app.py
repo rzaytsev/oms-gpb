@@ -8,6 +8,7 @@ from werkzeug.contrib.fixers import  ProxyFix
 import redis
 import json
 import datetime
+import re
 
 app = Flask(__name__)
 app.debug = True
@@ -81,7 +82,11 @@ def read_prices_db(i):
     for day in sorted(days):
         ts.append(day)
         prices_list = r.get('prices:'+day).split(' - ')
-        res.append([int(day)*1000,float(prices_list[i].replace(' ', '').replace(',', '.'))])
+        m = re.search(r'\d+,\d+', prices_list[i].replace(' ', ''))
+        if m:
+            res.append([int(day)*1000,float(m.group().replace(',', '.'))])
+        else:
+            res.append([int(day)*1000,float(0)])
     return res
 
 app.wsgi_app = ProxyFix(app.wsgi_app)
