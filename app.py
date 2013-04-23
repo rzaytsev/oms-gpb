@@ -35,24 +35,37 @@ def test():
 
 @app.route("/login")
 def login():
-    return render_template('login.html',active_menu=4)
+    return render_template('login.html',active_menu=6)
 
 @app.route("/gold")
 def get_gold():
-    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y %H:%M')
+    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime(u'%d.%m.%Y  %H:%M')
     buy_price =read_prices_db(0)[-1][1]
     sell_price = read_prices_db(1)[-1][1]
-    plotlines = r'''plotLines: [{ color: 'green', width: 2, value: 1600, dashStyle : 'shortdash', label: { text: 'label1'}}, { color: 'yellow', width: 2, value: 1400, dashStyle : 'shortdash', label: { text: 'label2'}} ]'''
-
+    #plotlines = r'''plotLines: [{ color: 'green', width: 2, value: 1600, dashStyle : 'shortdash', label: { text: 'label1'}}, { color: 'yellow', width: 2, value: 1400, dashStyle : 'shortdash', label: { text: 'label2'}} ]'''
+    plotlines = ""
     return render_template('metal.html', today=date, data_id=0, data_id1=1, metal_name=u'Золото',buy_price=buy_price, sell_price=sell_price, active_menu=2, plotlines=plotlines)
 
 @app.route("/silver")
 def get_silver():
-    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y %H:%M')
+    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y  %H:%M')
     buy_price =read_prices_db(2)[-1][1]
     sell_price = read_prices_db(3)[-1][1]
     return render_template('metal.html', today=date, data_id=2, data_id1=3, metal_name=u'Серебро',buy_price=buy_price, sell_price=sell_price, active_menu=3)
 
+@app.route("/platinum")
+def get_platinum():
+    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y  %H:%M')
+    buy_price =read_prices_db(4)[-1][1]
+    sell_price = read_prices_db(5)[-1][1]
+    return render_template('metal.html', today=date, data_id=4, data_id1=5, metal_name=u'Платина',buy_price=buy_price, sell_price=sell_price, active_menu=4)
+
+@app.route("/palladium")
+def get_palladium():
+    date =  datetime.datetime.fromtimestamp(float(read_prices_db(0)[-1][0])/1000,).strftime('%d.%m.%Y  %H:%M')
+    buy_price =read_prices_db(6)[-1][1]
+    sell_price = read_prices_db(7)[-1][1]
+    return render_template('metal.html', today=date, data_id=6, data_id1=7, metal_name=u'Палладий',buy_price=buy_price, sell_price=sell_price, active_menu=5)
 
 
 @app.route('/read-data/<int:id>')

@@ -8,13 +8,13 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,21 +30,24 @@
   </head>
 
   <body>
+  <script src="static/js/bootstrap.min.js"></script>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"><a href="/gold">Золото</a></span>
-            <span class="icon-bar"><a href="/silver">Серебро</a></span>
-            <span class="icon-bar"><a href="/login">Вход</a></span>
+          <span class="icon-bar"><</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a class="brand" href="/">Котировки ОМС</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class=""><a href="/gold">Золото</a></li>
-              <li><a href="/silver">Серебро</a></li>
-              <li><a href="/login">Вход</a></li>
+              <li class="{% if active_menu == 2 %}active{%endif%}"><a href="/gold">Золото</a></li>
+              <li class="{% if active_menu == 3 %}active{%endif%}"><a href="/silver">Серебро</a></li>
+              <li class="{% if active_menu == 4 %}active{%endif%}"><a href="/platinum">Платина</a></li>
+              <li class="{% if active_menu == 5 %}active{%endif%}"><a href="/palladium">Палладий</a></li>
+              <li class="{% if active_menu == 6 %}active{%endif%}"><a href="/login">Вход</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
