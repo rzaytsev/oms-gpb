@@ -70,16 +70,16 @@ $(function () {
                 {{plotlines | safe }}
                 },
                 series : [{
-                    name : 'Покупка ',
-                    data : data1,
-                    color : 'red',
-                    tooltip: { valueDecimals: 2 },
-                    },
-                    {
                     name : 'Продажа',
                     color : 'green',
                     data : data2,
                     tooltip: { valueDecimals: 2},
+                    },
+                    {
+                    name : 'Покупка ',
+                    data : data1,
+                    color : 'red',
+                    tooltip: { valueDecimals: 2 },
                     },]
             });
         });
