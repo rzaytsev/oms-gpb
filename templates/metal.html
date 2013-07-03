@@ -52,7 +52,7 @@
               <li class="{% if active_menu == 3 %}active{%endif%}"><a href="/silver">Серебро</a></li>
               <li class="{% if active_menu == 4 %}active{%endif%}"><a href="/platinum">Платина</a></li>
               <li class="{% if active_menu == 5 %}active{%endif%}"><a href="/palladium">Палладий</a></li>
-              <li class="{% if active_menu == 6 %}active{%endif%}"><a href="/login">Вход</a></li>
+              <li class="{% if active_menu == 6 %}active{%endif%}"><a href="/login">{{login_button_caption}}</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -70,7 +70,8 @@ $(function () {
                 rangeSelector : { selected : 1  },
                 title : {  text : '{{metal_name}}'    },
                 yAxis : {  title : {  text : 'Цена, руб.'  },
-                {{plotlines | safe }}
+                plotLines: [{{plotlines | safe }}]
+
                 },
                 series : [{
                     name : 'Продажа',
@@ -96,7 +97,7 @@ $(function () {
     <p><b>{{metal_name}}</b><br> Последнее изменение: {{ today }} <br> Продажа: <b>{{ sell_price }}</b> руб.<br> Покупка: <b>{{ buy_price }}</b> руб.</p>
         <div id="container1" style="height: 500px; min-width: 300px"></div>
 
-
+    <p>{{ sell_today | safe}}</p>
     </div> <!-- /container -->
 
   </body>
