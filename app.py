@@ -76,7 +76,7 @@ def draw_lines(user,metal):
     res = ''
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    if len(items) > 0:
+    if not items:
         for item in items:
             i = item.split(',')
             if metal == int(i[0]):
