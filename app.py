@@ -66,22 +66,23 @@ def get_user_items(user):
             res += str(id+1) +'<br><br>'
             res += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
             id += 1
-
-    return res
+        if res != '':
+            return res
 
 def draw_lines(user,metal):
     res = ''
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    for item in items:
-        i = item.split(',')
-        if metal == int(i[0]):
-            res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
-    return res[0:-1]
+    if items.count > 0:
+        for item in items:
+            i = item.split(',')
+            if metal == int(i[0]):
+                res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
+        return res[0:-1]
 
 def get_today_sell_data(user, metal,today_sell_price):
     total = 0.0
-    res = ''
+    res = ' '
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
     for item in items:
@@ -95,11 +96,13 @@ def get_today_sell_data(user, metal,today_sell_price):
             res += u"<br>&nbsp;&nbsp;&nbsp;" + text + ": " + str(income).replace('-', '') + u' руб. '
             res += '<br><br>'
             total += income
-    if res != '':
+    if res != ' ':
         total_text = u"Общий убыток: "
         if total >= 0:
             total_text = u"Общий доход: "
         return u'Если продать сегодня:<br> ' + res + "<hr>" +total_text + str(total) + u"руб."
+    else:
+        return ' '
 
 
 @app.route('/add-item', methods=['POST', 'GET'])
@@ -205,8 +208,6 @@ def get_metal(metal):
 @app.route("/gold")
 def get_gold():
     return get_metal(0)
-
-
 
 @app.route("/silver")
 def get_silver():
