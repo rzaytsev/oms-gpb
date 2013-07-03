@@ -61,7 +61,7 @@ def get_user_items(user):
     metals = [u'Золото', u'Серебро', u'Платина', u'Палладий']
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    if len(items) > 0:
+    if items > 0:
         for item in items:
             i = item.split(',')
             res1 += str(id+1) +'<br><br>'
