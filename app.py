@@ -60,11 +60,12 @@ def get_user_items(user):
     metals = [u'Золото', u'Серебро', u'Платина', u'Палладий']
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    for item in items:
-        i = item.split(',')
-        res += str(id+1) +'<br><br>'
-        res += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
-        id += 1
+    if items.count > 0:
+        for item in items:
+            i = item.split(',')
+            res += str(id+1) +'<br><br>'
+            res += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
+            id += 1
 
     return res
 
