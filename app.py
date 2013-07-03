@@ -56,29 +56,30 @@ def login():
 
 def get_user_items(user):
     res = u'''<br>Покупки:<br><a href="/add-item">Добавить информацию о покупке</a><br><hr>'''
+    res1 = ''
     id = 0
     metals = [u'Золото', u'Серебро', u'Платина', u'Палладий']
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    if items.count > 0:
-        for item in items:
-            i = item.split(',')
-            res += str(id+1) +'<br><br>'
-            res += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
-            id += 1
-        if res != '':
-            return res
+    for item in items:
+        i = item.split(',')
+        res1 += str(id+1) +'<br><br>'
+        res1 += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
+        id += 1
+    if res1 != '':
+        return res + res1
+    else:
+        return res
 
 def draw_lines(user,metal):
     res = ''
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    if items.count > 0:
-        for item in items:
-            i = item.split(',')
-            if metal == int(i[0]):
-                res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
-        return res[0:-1]
+    for item in items:
+        i = item.split(',')
+        if metal == int(i[0]):
+            res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
+    return res[0:-1]
 
 def get_today_sell_data(user, metal,today_sell_price):
     total = 0.0
