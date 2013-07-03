@@ -61,11 +61,12 @@ def get_user_items(user):
     metals = [u'Золото', u'Серебро', u'Платина', u'Палладий']
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    for item in items:
-        i = item.split(',')
-        res1 += str(id+1) +'<br><br>'
-        res1 += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
-        id += 1
+    if len(items) > 0:
+        for item in items:
+            i = item.split(',')
+            res1 += str(id+1) +'<br><br>'
+            res1 += u'Цена: ' + i[2] + u' руб. <br>Метал: ' + metals[int(i[0])-1] + u'<br>Количество: '+ i[1] + u" грамм<br><br><a href='/del-item/" + str(id) + u"'>удалить</a><br><hr>"
+            id += 1
     if res1 != '':
         return res + res1
     else:
@@ -75,28 +76,32 @@ def draw_lines(user,metal):
     res = ''
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    for item in items:
-        i = item.split(',')
-        if metal == int(i[0]):
-            res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
-    return res[0:-1]
+    if len(items) > 0:
+        for item in items:
+            i = item.split(',')
+            if metal == int(i[0]):
+                res += u"{ color: 'blue', width: 2, value: %s , dashStyle : 'shortdash' , label: { text: '%s - %s грамм'}}," % (i[2], i[2], i[1])
+        return res[0:-1]
+    else:
+        return '{ }'
 
 def get_today_sell_data(user, metal,today_sell_price):
     total = 0.0
     res = ' '
     r = redis.StrictRedis(host="localhost",port=6379,db=0)
     items = r.lrange('user:'+user+':items',0,-1)
-    for item in items:
-        i = item.split(',')
-        if metal == int(i[0]):
-            res += u"&nbsp;&nbsp;&nbsp;%s грамм будет стоить:  " % (i[1]) + str (float(i[1]) * today_sell_price)+ u' руб. ' + u'(Цена покупки: ' + str(float(i[2]))+ u" руб.)"
-            text = u'Убыток'
-            income = (float(i[1]) * today_sell_price - float(i[1]) * float(i[2]) )
-            if income >= 0:
-                text = u'Прибыль'
-            res += u"<br>&nbsp;&nbsp;&nbsp;" + text + ": " + str(income).replace('-', '') + u' руб. '
-            res += '<br><br>'
-            total += income
+    if len(items) > 0:
+        for item in items:
+            i = item.split(',')
+            if metal == int(i[0]):
+                res += u"&nbsp;&nbsp;&nbsp;%s грамм будет стоить:  " % (i[1]) + str (float(i[1]) * today_sell_price)+ u' руб. ' + u'(Цена покупки: ' + str(float(i[2]))+ u" руб.)"
+                text = u'Убыток'
+                income = (float(i[1]) * today_sell_price - float(i[1]) * float(i[2]) )
+                if income >= 0:
+                    text = u'Прибыль'
+                res += u"<br>&nbsp;&nbsp;&nbsp;" + text + ": " + str(income).replace('-', '') + u' руб. '
+                res += '<br><br>'
+                total += income
     if res != ' ':
         total_text = u"Общий убыток: "
         if total >= 0:
