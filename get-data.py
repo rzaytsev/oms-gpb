@@ -33,6 +33,16 @@ def get_current_links(url):
 
     return data
 
+
+def extract_prices_from_pdf(str):
+    res = []
+    content = " ".join(str.replace(u"\xa0", " ").strip().split())
+    prices = re.findall(r'([\d]*\s[\d]+,[\d]+)', content.encode("ascii", "ignore"))
+    for price in prices:
+        res.append(price.strip())
+
+    return ' - '.join(res)
+
 def read_pdf(url):
     remoteFile = urlopen(Request(url)).read()
     memoryFile = StringIO(remoteFile)
@@ -45,14 +55,13 @@ def read_pdf(url):
         content += pdf.getPage(i).extractText() + "\n"
     # Collapse whitespace
     content = " ".join(content.replace(u"\xa0", " ").strip().split())
-    str = content.encode("ascii", "ignore")
     #print 'pdf: ' + content + '\n'
-    r = []
-    if not r:
-        for i in str.split(':')[-4:]:
-            r.append(i.lstrip('- ').split(' - '))
+    res = []
+    prices = re.findall(r'([\d]*\s[\d]+,[\d]+)', content.encode("ascii", "ignore"))
+    for price in prices:
+        res.append(price.strip())
 
-    return r
+    return ' - '.join(res)
 
 def main():
     args = sys.argv[1:]
@@ -78,26 +87,18 @@ def main():
         date1 = datetime.datetime.strptime(link[1] + ' ' + link[2],'%d.%m.%Y %H:%M')
         ts1 =date1.strftime('%s')
 
-        prices =  read_pdf(link[0])
-        if (not prices == [['']]):
-            s =''
-            for metal in prices:
-                s += metal[0].strip() + ' - ' +  metal[1].strip()
-                s += ' - '
-            s = s[0:len(s)-2]
+        s =  read_pdf(link[0])
 
-            if r.sadd('days', ts1):
-                print "add new day"
-                print 'add: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
-                print 'prices:' + ts1 + " | " +s
-                r.set('prices:'+ts1, s)
-            else:
-                print "alredy exists: " + str(datetime.datetime.fromtimestamp(float(ts1)))
-
-            r.setnx('day:'+ts1, s)
-            print'--------------------------------------------------------'
+        if r.sadd('days', ts1):
+            print "add new day"
+            print 'add: ' + str(datetime.datetime.fromtimestamp(float(ts1)))
+            print 'prices:' + ts1 + " | " +s
+            r.set('prices:'+ts1, s)
         else:
-            print "\n\n !!! cannot read pdf file !!! \n\n"
+            print "alredy exists: " + str(datetime.datetime.fromtimestamp(float(ts1)))
+
+        r.setnx('day:'+ts1, s)
+        print'--------------------------------------------------------'
 
 
 
