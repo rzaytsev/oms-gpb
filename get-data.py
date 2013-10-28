@@ -47,15 +47,8 @@ def extract_prices_from_pdf(str):
 def read_pdf(url):
     remoteFile = urlopen(Request(url)).read()
     memoryFile = StringIO(remoteFile)
-    content = ""
-    # Load PDF into pyPDF
-    #pdf = PdfFileReader(memoryFile)
 
-    #print memoryFile.getvalue()
-
-    #with open(memoryFile.getvalue()) as f:
     doc = slate.PDF(memoryFile)
-
     content = doc[0]
     print 'pdf: ' + content + '\n'
     res = []
