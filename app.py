@@ -240,6 +240,7 @@ def read_prices_db(i):
     for day in sorted(days):
         ts.append(day)
         prices_list = r.get('prices:'+day).split(' - ')
+
         m = re.search(r'\d+,\d+', prices_list[i].replace(' ', ''))
         if m:
             res.append([int(day)*1000,float(m.group().replace(',', '.'))])

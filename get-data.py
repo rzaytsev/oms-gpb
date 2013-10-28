@@ -8,6 +8,7 @@ from pyPdf import PdfFileReader
 from StringIO import StringIO
 import datetime
 import redis
+import slate
 
 def wget(url):
     ufile = urlopen(url)  ## get file-like object for url
@@ -48,20 +49,22 @@ def read_pdf(url):
     memoryFile = StringIO(remoteFile)
     content = ""
     # Load PDF into pyPDF
-    pdf = PdfFileReader(memoryFile)
-    # Iterate pages
-    for i in range(0, pdf.getNumPages()):
-        # Extract text from page and add to content
-        content += pdf.getPage(i).extractText() + "\n"
-    # Collapse whitespace
-    content = " ".join(content.replace(u"\xa0", " ").strip().split())
-    #print 'pdf: ' + content + '\n'
+    #pdf = PdfFileReader(memoryFile)
+
+    #print memoryFile.getvalue()
+
+    #with open(memoryFile.getvalue()) as f:
+    doc = slate.PDF(memoryFile)
+
+    content = doc[0]
+    print 'pdf: ' + content + '\n'
     res = []
-    prices = re.findall(r'([\d]*\s[\d]+,[\d]+)', content.encode("ascii", "ignore"))
+    prices = re.findall(r'([\d]*\s[\d]+,[\d]+)', content)
     for price in prices:
         res.append(price.strip())
 
     return ' - '.join(res)
+
 
 def main():
     args = sys.argv[1:]
@@ -86,7 +89,7 @@ def main():
         print link
         date1 = datetime.datetime.strptime(link[1] + ' ' + link[2],'%d.%m.%Y %H:%M')
         ts1 =date1.strftime('%s')
-
+        print ts1
         s =  read_pdf(link[0])
 
         if r.sadd('days', ts1):
